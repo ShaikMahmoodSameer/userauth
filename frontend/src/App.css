@@ -1,0 +1,122 @@
+.w-60{width: 60%}
+.App {
+  text-align: center;
+}
+h1{
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* LogPopup css */
+.popupbox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  z-index: -1; /* Start with a z-index behind the background */
+  pointer-events: none; /* Disable pointer events initially */
+  background-color: transparent; /* Initially transparent */
+  width: 0;
+  height: 0;
+}
+
+/* Background overlay styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark background */
+  z-index: 1; /* Place it above the popup */
+  opacity: 0;
+  pointer-events: none; /* Disable pointer events initially */
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Styles for the active popup */
+.popupbox.active {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  z-index: 2; /* Place it above the background */
+  pointer-events: auto; /* Enable pointer events */
+  background-color: #00000081; /* Change to your desired background color */
+  width: auto;
+  height: auto;
+}
+
+/* Show the background overlay when the popup is active */
+.popupbox.active + .overlay {
+  opacity: 1;
+  pointer-events: auto; /* Enable pointer events */
+}
+.bottomlogbtn{
+  padding: 0 5px;
+  font-weight: 700;
+  background: none;
+  color: blue;
+  border: none;
+}
+.bottomlogbtn:hover{
+  color: red;
+}
+
+.popupclosebtn{
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  border: none;
+}
+
+/* LogPopup css */
+
+/* forgot password css */
+.fp-wrapper{
+  width: 500px;
+}
+/* forgot password css */
